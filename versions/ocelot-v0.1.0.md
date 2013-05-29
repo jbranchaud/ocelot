@@ -61,4 +61,75 @@ commit message belong to which artifacts. We also learn that the changes to
 
 ## Specification
 
+The Ocelot commit annotation should be wrapped up in the familiar YAML
+document delimiters:
 
+    ---
+    # Ocelot annotations
+    ...
+
+### General Message
+
+For part of the commit message that isn't specific to any particular
+artifact, the text should be put at the beginning of the Ocelot annotation
+(or optionally after empty brackets).
+
+#### At the beginning (preferred)
+
+    ---
+    This commit involves refactorings over parts of the codebase.
+    # the rest of the annotations
+    ...
+
+#### After empty brackets
+
+    ---
+    # some annotations
+    []
+    This commit involves refactorings over parts of the codebase.
+    ...
+
+### Single File Annotation
+
+For annotating a single file with some message, wrap the project-relative
+path in brackets and then follow with the message:
+
+    ---
+    [src/zoo/cats/Ocelot.java]
+    Adding some great functionality that should increase performance.
+    ...
+
+Duplicate annotations essentially indicate a separate annotation for the same
+file.
+
+### Multi-File Annotation
+
+    ---
+    [src/repo/Blob.rb|src/repo/Tree.rb]
+    Creating the Blob class and Tree class for my repository project.
+    ...
+
+### File Relationship Annotation
+
+    ---
+    [src/repo/Tree.rb=src/repo/Blob.rb]
+    The Tree now has a collection of blobs which have been refactored.
+    ...
+
+### Uni-directional File Relationship Annotation
+
+    ---
+    [_config.yml=>README.md]
+    The config file now ignores the README file.
+    ...
+
+### Bi-directional File Relationship Annotation
+
+    ---
+    [WhiteBox.py<=>BlackBox.py]
+    Describe some bi-directional relationship here.
+    ...
+
+This annotation seems to be the same as the *File Relationship Annotation*,
+it will be interesting to see if there is a distinction that can be made
+between the two.
