@@ -207,3 +207,20 @@ file.
 This annotation seems to be the same as the *File Relationship Annotation*,
 it will be interesting to see if there is a distinction that can be made
 between the two.
+
+## Experimental Features
+
+Here are some potential Ocelot features that are more experimental at the
+moment. These are things that don't have a specific use case in mind, but
+could prove useful in keeping the language extensible.
+
+### Grouped Artifacts
+
+This involves wrapping two or more artifacts in parentheses in order to say
+that they are grouped together with respect to some relationship.
+
+    ---
+    [Shape.java=(Square.java|Rectangle.java)]
+    Some message about Shape's relationship to Square and Rectangle for this
+    change set.
+    ...
