@@ -53,6 +53,17 @@ with Ocelot annotations:
     Removing some print statements that aren't needed anymore.
     ...
 
+The same can be modeled in the Markdown-esque syntax:
+
+    ---
+    = Committing 3 files
+    == Shape.java|Square.java
+    Adding the abstract area method to shape and a concrete implementation
+    of that method to the Square class.
+    == Utility.java
+    Removing some print statements that aren't needed anymore.
+    ...
+
 With this minimal annotation, we can now understand which parts of the
 commit message belong to which artifacts. We also learn that the changes to
 `Shape.java` and `Square.java` are unrelated to the changes made to
@@ -137,9 +148,8 @@ file.
     ---
     = Commit Header
     == src/zoo/cats/Ocelot.java
-    Adding some great functionality that should increase performance.
-    == src/zoo/cats/Ocelot.java
-    Refactoring the Ocelot constructor.
+    - Adding some great functionality that should increase performance.
+    - Refactoring the Ocelot constructor.
     ...
 
 ### Multi-File Annotation
