@@ -56,11 +56,11 @@ with Ocelot annotations:
 The same can be modeled in the Markdown-esque syntax:
 
     ---
-    = Committing 3 files
-    == Shape.java|Square.java
+    # Committing 3 files
+    ## Shape.java|Square.java
     Adding the abstract area method to shape and a concrete implementation
     of that method to the Square class.
-    == Utility.java
+    ## Utility.java
     Removing some print statements that aren't needed anymore.
     ...
 
@@ -82,8 +82,8 @@ document delimiters:
     ...
 
     ---
-    = Commit Header
-    # Ocelot annotations
+    # Commit Header
+    // Ocelot annotations
     ...
 
 ### General Message
@@ -100,7 +100,7 @@ artifact, the text should be put at the beginning of the Ocelot annotation
     ...
 
     ---
-    = Commit Header
+    # Commit Header
     This commit involves refactorings over parts of the codebase.
     ...
 
@@ -113,9 +113,9 @@ artifact, the text should be put at the beginning of the Ocelot annotation
     ...
 
     ---
-    = Commit Header
-    # some annotations
-    ==
+    # Commit Header
+    // some annotations
+    ##
     This commit involves refactorings over parts of the codebase.
     ...
 
@@ -130,8 +130,8 @@ path in brackets and then follow with the message:
     ...
 
     ---
-    = Commit Header
-    == src/zoo/cats/Ocelot.java
+    # Commit Header
+    ## src/zoo/cats/Ocelot.java
     Adding some great functionality that should increase performance.
     ...
 
@@ -146,8 +146,8 @@ file.
     ...
 
     ---
-    = Commit Header
-    == src/zoo/cats/Ocelot.java
+    # Commit Header
+    ## src/zoo/cats/Ocelot.java
     - Adding some great functionality that should increase performance.
     - Refactoring the Ocelot constructor.
     ...
@@ -160,8 +160,8 @@ file.
     ...
 
     ---
-    = Commit Header
-    == src/repo/Blob.rb|src/repo/Tree.rb
+    # Commit Header
+    ## src/repo/Blob.rb|src/repo/Tree.rb
     Creating the Blob class and Tree class for my repository project.
     ...
 
@@ -173,8 +173,8 @@ file.
     ...
 
     ---
-    = Commit Header
-    == src/repo/Tree.rb=src/repo/Blob.rb
+    # Commit Header
+    ## src/repo/Tree.rb=src/repo/Blob.rb
     The Tree now has a collection of blobs which have been refactored.
     ...
 
@@ -186,8 +186,8 @@ file.
     ...
 
     ---
-    = Commit Header
-    == _config.yml=>README.md
+    # Commit Header
+    ## _config.yml=>README.md
     The config file now ignores the README file.
     ...
 
@@ -199,8 +199,8 @@ file.
     ...
 
     ---
-    = Commit Header
-    == WhiteBox.py<=>BlackBox.py
+    # Commit Header
+    ## WhiteBox.py<=>BlackBox.py
     Describe some bi-directional relationship here.
     ...
 
