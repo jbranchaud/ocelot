@@ -9,4 +9,4 @@
 Ocelot is a domain specific language for annotating commit messages.
 
 The standard syntax primarily allows it to be written and read by machines,
-but it is simple enough for humans to easily read and write it as well.
+but it is simple enough for humans to easily read and write as well.
