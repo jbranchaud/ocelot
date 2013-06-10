@@ -119,6 +119,7 @@ Alternate approach using the list syntax from markdown.
     [src/zoo/cats/Ocelot.java]
     - Adding some great functionality that should increase performance.
     - Refactoring the Ocelot constructor.
+    ...
 
 ### Multi-File Annotation
 
