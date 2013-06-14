@@ -9,7 +9,7 @@
 ocelot is a commit annotation language for version systems like git, hg, and
 SVN.
 
-The standard syntax primarily allows it to be written and read by machines,
+The standard syntax primarily allows it to be read and written by machines,
 but it is simple enough for humans to easily read and write as well.
 
 ## Getting Started
@@ -20,7 +20,7 @@ commits with ocelot annotations manually. In fact, because of ocelot's
 simplicity this is a recommended approach.
 
 When it is time to write your commit message, you can start with a short
-one-liner identifying the overall purpose of that commit (optional).
+one-liner identifying the overall purpose of that commit.
 
     Adding a couple new shapes to this project.
 
@@ -54,6 +54,7 @@ The commit message in full ultimately might look something like this:
 This is a rather verbose message that is only made necessary by rather
 complex commits. The same commit could be annotated more concisely like so:
 
+    Adding a couple new shapes to this project.
     [src/shapes/Square.java]
     Adding the basis for the Square class, but it is still missing some
     functionality like an area function.
