@@ -60,3 +60,15 @@ complex commits. The same commit could be annotated more concisely like so:
     [src/shapes/Rectangle.java]
     Also adding the Rectangle class which inherits form the existing Shape
     class.
+
+## Feedback
+
+At this stage in the ocelot project as we continue to refine the
+specification, we both welcome and need feedback from those that are brave
+enough to use it.
+
+If you have thoughts or questions about specific features of the language
+as well as more general comments, open a new GitHub issue and detail your
+thoughts.
+
+Everything is fair game!
