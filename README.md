@@ -62,6 +62,20 @@ complex commits. The same commit could be annotated more concisely like so:
     Also adding the Rectangle class which inherits form the existing Shape
     class.
 
+## Benefits
+
+There are a number of benefits that we believe will be gained through
+committing to the use of ocelot annotations in commit messages:
+
+- Helps the committer think more deeply about the commit, the relevant
+  artifacts, and the way it is all communicated.
+
+- Makes commits easier to understand and conceptualize for other developers
+  (for example, during code reviews).
+
+- Embeds more metadata in commit messages which will utlimately improve the
+  results of software repository data mining.
+
 ## Feedback
 
 At this stage in the ocelot project as we continue to refine the
