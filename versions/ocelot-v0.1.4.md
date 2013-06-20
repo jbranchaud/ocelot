@@ -145,7 +145,7 @@ Here are some potential Ocelot features that are more experimental at the
 moment. These are things that don't have a specific use case in mind, but
 could prove useful in keeping the language extensible.
 
-### Grouped Artifacts
+### Grouped Artifacts Annotation
 
 This involves wrapping two or more artifacts in parentheses in order to say
 that they are grouped together with respect to some relationship.
@@ -153,3 +153,15 @@ that they are grouped together with respect to some relationship.
     [Shape.java=(Square.java|Rectangle.java)]
     Some message about Shape's relationship to Square and Rectangle for this
     change set.
+
+### Line-Specific Annotation
+
+Annotations can be attributed at a finer-grained level than the file level
+by specifying specific line numbers in the diff while writing the parts of
+the commit message. This can be achieved by appending specific line numbers
+to the end of the file name.
+
+    [shapes/Square.java@33-36]
+    Removing some unneeded print statements.
+    [shapes/Square.java@44-45]
+    Refactoring some code in the area method.
