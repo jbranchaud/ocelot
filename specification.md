@@ -1,4 +1,4 @@
-# Ocelot v0.1.2
+# Ocelot v0.3.0
 
 a versioning system commit annotation DSL
 
