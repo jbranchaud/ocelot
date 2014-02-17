@@ -1,4 +1,4 @@
-# Ocelot v0.4.0
+# Ocelot v0.1.4
 
 a versioning system commit annotation DSL
 
@@ -65,20 +65,33 @@ comments.
 
 ### General Message
 
-For part of the commit message that isn't specific to any particular
-artifact, the text should be put at the beginning of the Ocelot annotation
-(or optionally after empty brackets).
-
-#### At the beginning (preferred)
+Every commit message should start with a general message that gives a brief
+overall description of the changes made.
 
     This commit involves refactorings over parts of the codebase.
     # the rest of the annotations
 
-#### After empty brackets
+### Implicit Notation
 
-    # some annotations
-    []
-    This commit involves refactorings over parts of the codebase.
+Because of its aim to be succinct, ocelot offers an implicit notation.
+Implicit notation is intended to be used for single file commits in order to
+reduce verbosity. This is equivalent to writing just a general message.
+
+Rather than redundantly write:
+
+    Adding the LICENSE section to the README
+    [README.md]
+    Adding the LICENSE section
+
+One can simply write:
+
+    Adding the LICENSE section to the README
+
+If `README.md` is the only committed file, then it is easy to associate that
+message with the file.
+
+It is *strongly* discouraged to use implicit notation when the commit
+contains multiple files.
 
 ### Single File Annotation
 
@@ -132,7 +145,7 @@ Here are some potential Ocelot features that are more experimental at the
 moment. These are things that don't have a specific use case in mind, but
 could prove useful in keeping the language extensible.
 
-### Grouped Artifacts
+### Grouped Artifacts Annotation
 
 This involves wrapping two or more artifacts in parentheses in order to say
 that they are grouped together with respect to some relationship.
@@ -140,3 +153,15 @@ that they are grouped together with respect to some relationship.
     [Shape.java=(Square.java|Rectangle.java)]
     Some message about Shape's relationship to Square and Rectangle for this
     change set.
+
+### Line-Specific Annotation
+
+Annotations can be attributed at a finer-grained level than the file level
+by specifying specific line numbers in the diff while writing the parts of
+the commit message. This can be achieved by appending specific line numbers
+to the end of the file name.
+
+    [shapes/Square.java@33-36]
+    Removing some unneeded print statements.
+    [shapes/Square.java@44-45]
+    Refactoring some code in the area method.
