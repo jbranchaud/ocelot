@@ -87,3 +87,9 @@ as well as more general comments, open a new GitHub issue and detail your
 thoughts.
 
 Everything is fair game!
+
+## License
+
+&copy; 2014 [Josh Branchaud](http://joshbranchaud.com) and Corey Jergensen
+
+We have not yet decided on a license for this project.
