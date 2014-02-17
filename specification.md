@@ -1,4 +1,4 @@
-# Ocelot v0.2.0
+# Ocelot v0.1.2
 
 a versioning system commit annotation DSL
 
@@ -53,17 +53,6 @@ with Ocelot annotations:
     Removing some print statements that aren't needed anymore.
     ...
 
-The same can be modeled in the Markdown-esque syntax:
-
-    ---
-    # Committing 3 files
-    ## Shape.java|Square.java
-    Adding the abstract area method to shape and a concrete implementation
-    of that method to the Square class.
-    ## Utility.java
-    Removing some print statements that aren't needed anymore.
-    ...
-
 With this minimal annotation, we can now understand which parts of the
 commit message belong to which artifacts. We also learn that the changes to
 `Shape.java` and `Square.java` are unrelated to the changes made to
@@ -72,18 +61,15 @@ commit message belong to which artifacts. We also learn that the changes to
 
 ## Specification
 
-The specification includes the Ocelot DSL and the Markdown equivalent.
+The specification for the Ocelot DSL. The markdown equivalent has been
+redacted, though most markdown syntax will still be valid within the
+comments.
 
 The Ocelot commit annotation should be wrapped up in the familiar YAML
 document delimiters:
 
     ---
     # Ocelot annotations
-    ...
-
-    ---
-    # Commit Header
-    // Ocelot annotations
     ...
 
 ### General Message
@@ -99,23 +85,11 @@ artifact, the text should be put at the beginning of the Ocelot annotation
     # the rest of the annotations
     ...
 
-    ---
-    # Commit Header
-    This commit involves refactorings over parts of the codebase.
-    ...
-
 #### After empty brackets
 
     ---
     # some annotations
     []
-    This commit involves refactorings over parts of the codebase.
-    ...
-
-    ---
-    # Commit Header
-    // some annotations
-    ##
     This commit involves refactorings over parts of the codebase.
     ...
 
@@ -129,12 +103,6 @@ path in brackets and then follow with the message:
     Adding some great functionality that should increase performance.
     ...
 
-    ---
-    # Commit Header
-    ## src/zoo/cats/Ocelot.java
-    Adding some great functionality that should increase performance.
-    ...
-
 Duplicate annotations essentially indicate a separate annotation for the same
 file.
 
@@ -145,9 +113,10 @@ file.
     Refactoring the Ocelot constructor.
     ...
 
+Alternate approach using the list syntax from markdown.
+
     ---
-    # Commit Header
-    ## src/zoo/cats/Ocelot.java
+    [src/zoo/cats/Ocelot.java]
     - Adding some great functionality that should increase performance.
     - Refactoring the Ocelot constructor.
     ...
@@ -159,22 +128,10 @@ file.
     Creating the Blob class and Tree class for my repository project.
     ...
 
-    ---
-    # Commit Header
-    ## src/repo/Blob.rb|src/repo/Tree.rb
-    Creating the Blob class and Tree class for my repository project.
-    ...
-
 ### File Relationship Annotation
 
     ---
     [src/repo/Tree.rb=src/repo/Blob.rb]
-    The Tree now has a collection of blobs which have been refactored.
-    ...
-
-    ---
-    # Commit Header
-    ## src/repo/Tree.rb=src/repo/Blob.rb
     The Tree now has a collection of blobs which have been refactored.
     ...
 
@@ -185,22 +142,10 @@ file.
     The config file now ignores the README file.
     ...
 
-    ---
-    # Commit Header
-    ## _config.yml=>README.md
-    The config file now ignores the README file.
-    ...
-
 ### Bi-directional File Relationship Annotation
 
     ---
     [WhiteBox.py<=>BlackBox.py]
-    Describe some bi-directional relationship here.
-    ...
-
-    ---
-    # Commit Header
-    ## WhiteBox.py<=>BlackBox.py
     Describe some bi-directional relationship here.
     ...
 
